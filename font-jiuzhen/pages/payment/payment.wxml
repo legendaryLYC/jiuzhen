@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='table'>
+      <view class='tr'>
+        <view class='th' style="width:30%;">支付项目</view>
+        <view class='th'>操作</view>
+      </view>
+      <view class='tr' wx:if="{{user.status == 0}}">
+        <view class='td' style="width:30%;">预约挂号费</view>
+        
+        <view class='td'>
+          <view class="btn-area">
+            <button type="primary" bindtap="gotoPage" data-page="/pages/payList/payList" data-id="1"
+              style="font-size:10px;width:80px;">
+              支付
+            </button>
+          </view>
+        </view>
+      </view>
+      <view class='tr' wx:if="{{user.status == 1}}">
+        <view class='td' style="width:30%;">医药费用</view>
+        <view class='td'>
+          <view class="btn-area">
+            <button type="primary" data-page="/pages/payList/payList" data-id="2"
+              style="font-size:10px;width:80px;" bindtap="gotoPage">支付</button>
+          </view>
+        </view>
+      </view>
+      <view class='tr' wx:if="{{user.status == 3}}">
+        <view class='td' style="width:30%;">住院费用</view>
+        <view class='td'>
+          <view class="btn-area">
+            <button type="primary" data-page="/pages/payList/payList" data-id="3"
+              style="font-size:10px;width:80px;" bindtap="gotoPage">支付</button>
+          </view>
+        </view>
+      </view>
+      <view class='tr' wx:if="{{user.status == 2 || user.status == 4}}">
+        <view class='td'>暂无缴费项</view>
+      </view>
+    </view>
+</view>
+<tabbar user-auth="0" active="/pages/payment/payment"></tabbar>  

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="flex-wrp" style="flex-direction:row;">
+      <input type="text" confirm-type="search" bindinput="inputHospitalName" placeholder="请输入科室名" value="{{hospitalName}}" />
+      <view class="btn-area">
+        <button type="primary" size="mini"  bindtap="bindButtonTap">科室搜索</button>
+      </view>
+    </view>
+  </view>
+  <view class='table'>
+    <view class='tr'>
+      <view class='th' >科室名</view>
+    </view>
+    <view class='tr' bindtap="gotoPage" wx:for="{{departmentList}}" data-page="/pages/doctors/doctors" data-id="{{item.id}}"> 
+      <view class='td' >{{item.name}}</view>
+    </view>
+    <view class='tr' wx:if="{{departmentList.length == 0}}">
+      <view class='td'>暂无科室</view>
+    </view>
+  </view>
+</view>
+<tabbar user-auth="0" active="/pages/reservation/reservation"></tabbar>  

@@ -1,0 +1,65 @@
+<!--pages/component/tabbar/tabbar.wxml-->
+<block wx:if="{{!userAuth}}">
+  <view class="cu-bar tabbar bg-white barsssss">
+    <view class="action" bindtap='navigator' data-page="/pages/reservation/reservation">
+      <view class='icon-cu-image' data-page="/pages/reservation/reservation">
+        <image src='/images/reservation.png' data-page="/pages/reservation/reservation"></image>
+      </view>
+      <view data-page="/pages/reservation/reservation" class='{{active == "/pages/reservation/reservation" ? "text-blue" : "text-gray"}}'>预约挂号</view>
+    </view>
+
+    <view class="action" bindtap='navigator' data-page="/pages/payment/payment">
+      <view class='icon-cu-image' data-page="/pages/payment/payment">
+        <image src='/images/payment.png' data-page="/pages/payment/payment"></image>
+      </view>
+      <view data-page="/pages/payment/payment" class='{{active == "/pages/payment/payment" ? "text-blue" : "text-gray"}}'>门诊缴费</view>
+    </view>
+
+    <view class="action" bindtap='navigator' data-page="/pages/application/application">
+      <view class='icon-cu-image' data-page="/pages/application/application">
+        <image src='/images/appliact.png' data-page="/pages/application/application"></image>
+
+      </view>
+      <view data-page="/pages/application/application" class='{{active == "/pages/application/application" ? "text-blue" : "text-gray"}}'>住院申请</view>
+    </view>
+    <view class="action" bindtap='navigator' data-page="/pages/index/index">
+      <view class='icon-cu-image' data-page="/pages/index/index">
+        <image src='/images/personcenter.png' data-page="/pages/index/index"></image>
+      </view>
+      <view data-page="/pages/index/index" class='{{active == "/pages/index/index" ? "text-blue" : "text-gray"}}'>个人中心</view>
+    </view>
+  </view>
+</block>
+
+
+
+<block wx:if="{{userAuth}}">
+  <view class="cu-bar tabbar bg-white barsssss">
+    <view class="action" bindtap='navigator' data-page="/pages/examine/examine">
+      <view class='icon-cu-image' data-page="/pages/examine/examine">
+        <image src='/images/reservation.png' data-page="/pages/examine/examine"></image>
+      </view>
+      <view data-page="/pages/examine/examine" class='{{active == "/pages/examine/examine" ? "text-blue" : "text-gray"}}'>住院审核</view>
+    </view>
+
+    <view class="action" bindtap='navigator' data-page="/pages/hospital/hospital">
+      <view class='icon-cu-image' data-page="/pages/hospital/hospital">
+        <image src='/images/payment.png' data-page="/pages/hospital/hospital"></image>
+      </view>
+      <view data-page="/pages/hospital/hospital" class='{{active == "/pages/hospital/hospital" ? "text-blue" : "text-gray"}}'>医院表修改</view>
+    </view>
+
+    <view class="action" bindtap='navigator' data-page="/pages/department/department">
+      <view class='icon-cu-image' data-page="/pages/department/department">
+        <image src='/images/appliact.png' data-page="/pages/department/department"></image>
+      </view>
+      <view data-page="/pages/department/department" class='{{active == "/pages/department/department" ? "text-blue" : "text-gray"}}'>科室修改</view>
+    </view>
+    <view class="action" bindtap='navigator' data-page="/pages/expert/expert">
+      <view class='icon-cu-image' data-page="/pages/expert/expert">
+        <image src='/images/personcenter.png' data-page="/pages/expert/expert"></image>
+      </view>
+      <view data-page="/pages/expert/expert" class='{{active == "/pages/expert/expert" ? "text-blue" : "text-gray"}}'>专家修改</view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/reservation/reservation",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personalcenter/personalcenter",
+    "pages/payment/payment",
+    "pages/application/application",
+    "pages/myinformation/myinformation",
+    "pages/mymessage/mymessage",
+    "pages/component/tabbar/tabbar",
+    "pages/examine/examine",
+    "pages/hospital/hospital",
+    "pages/department/department",
+    "pages/expert/expert",
+    "pages/details/details",
+    "pages/doctors/doctors",
+    "pages/appointment/appointment",
+    "pages/payList/payList",
+    "pages/edit-hospital/edit-hospital",
+    "pages/edit-department/edit-department",
+    "pages/edit-expert/edit-expert"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#59A5F0",
+    "navigationBarTitleText": "就诊助手小程序",
+    "navigationBarTextStyle": "white"
+  }
+}
